@@ -31,7 +31,7 @@ def poem():
   print random.choice(ranom)
   whattodo()
 def whattodo():
-	print "what would you like to do with me",text,"today?(play,talk,advice)"
+	print "what would you like to do with me Amir today?(play,talk,advice)"
 	command = raw_input("")
 	if command == "advice":
           poem()
@@ -41,7 +41,7 @@ def whattodo():
 def greeter():		
 	greetings = ["Hello","Whats going on!","Nice to see you","hi,nice to see you.","Hey,feeling lonely?","Have you had a good day?yes or no"]
 	greeting = random.choice(greetings)
-	print "Hi,welcome to my text world,in case you want to hang out in your phone."
+	print "Hi,welcome to my Monika's text world,in case you want to hang out in your phone."
 	print greeting
 	if greeting == "Have you had a good day?yes or no":
 		    response = raw_input("")
@@ -54,15 +54,4 @@ def greeter():
 	else:
 		    whattodo()
 		
-fw = open('name.txt','r')
-text = fw.read()
-if text == "" :
-	fw.close()
-	print "What is your name?"
-	global name
-	name = raw_input("")
-	fr = open('name.txt','w')
-	fr.write(name)
-    	fr.close()
-else:
-	greeter()
+greeter()
